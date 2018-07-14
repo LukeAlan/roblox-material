@@ -1,0 +1,563 @@
+/*Just a note to you guys, please do not steal this and call it your own*/
+
+
+:root
+{
+    --version: "Theme Version: Beta 1.4.5, Copyright Luke Alan 2018";
+    --dark1: #0d0d0d;
+    --dark2: #1b1b1b;
+    --dark3: #282828;
+    --dark4: #333;
+    --dark5: #151515;
+    --light1: #bbb;
+    --light2: #707070;
+    --shadow: #0a0a0afc;
+    --textcolor: #c1c1c1;
+}
+
+
+/*Shows Version in settings*/
+.section-content.settings-account-info-container:after
+{
+    width: 794px;
+    height: 11px;
+    left: 15px!important;
+    content: var(--version);
+    padding-bottom: 15px;
+    background-color: var(--dark2);
+    padding-left: 15px;
+    padding-top: 0;
+    color: #bbbbbb;
+    font-weight: 400;
+    box-shadow: 0 4px 4px 0 var(--shadow);
+}
+
+.section-content.settings-account-info-container
+{
+    height: 150px!important;
+    margin-bottom: 50px!important;
+    padding: 0;
+}
+
+.col-sm-12
+{
+    padding: 15px;
+}
+
+
+/*Rest of the things*/
+body,
+.content,
+#Body,
+#RepositionBody,
+.games-list-container,
+#MyCreationsTab,
+#DeveloperExchangeTab,
+html,
+.container-footer
+{
+    background-color: var(--dark1)!important;
+}
+
+.avatar-card-content,
+#LibraryTab,
+.SmallCatalogItemView,
+.dialog-container .dialog-body,
+.dialog-container,
+.game-card-container,
+.section-content,
+.CatalogItemInner.SmallInner
+{
+    background-color: var(--dark2)!important;
+}
+#build-page td.menu-area a.tab-item,
+.verticaltab{background-color:var(--dark2);}
+
+
+.separator{background-color:var(--dark3)!important;}
+#CashOutWidget,
+.divider-left{border-color: var(--dark3)!important;}
+.tab-container > .tab-active
+{
+    background-color: var(--light2);
+}
+
+.SmallCatalogItemView:hover .CatalogItemInner{background-color: var(--dark4)!important; border-color:var(--dark3)!important; box-shadow: 0 0 8px 1px var(--shadow)!important;}
+
+.tab-container > div
+{
+    background-color: var(--dark4);
+}
+
+.ph-modal-popup
+{
+    background-color: var(--dark2)!important;
+    box-shadow: 0 0 5px 2px var(--shadow)!important;
+}
+
+.menu-vertical
+{
+    background-color: var(--dark2);
+    width: 160px;
+    box-shadow: 0 1px 3px var(--shadow);
+}
+
+.dialog-container .dialog-input-container
+{
+    border-color: var(--dark3)!important;
+}
+
+.dialog-input-container,
+.dialog-input.ng-pristine.ng-valid,
+.dialog-input.ng-valid.ng-isolate-scope
+{
+    background-color: var(--dark3);
+}
+
+.section-content.people-list
+{
+    background-color: var(--dark2)!important;
+    padding: 15px;
+    height: 126px;
+}
+
+.people-list-container
+{
+    height: 183px;
+}
+
+.game-card-footer
+{
+    border-color: var(--dark3);
+}
+
+.vote-mask .segment
+{
+    background-color: var(--dark2)!important;
+}
+
+.notification-stream-body.ng-scope
+{
+    background-color: var(--dark3);
+}
+
+.notification-stream-header.ng-scope
+{
+    background-color: var(--dark3);
+}
+
+.section[id='feed-container'] .section-content,
+.chat-main
+{
+    background: var(--dark2);
+}
+
+.profile-about-footer
+{
+    border-top: 1px solid var(--dark3);
+}
+
+.hlist.friend-list.ng-scope
+{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+.section.game-about-container .section-content
+{
+    background: var(--dark2);
+}
+
+.notification-stream-list .notification-stream-item,
+.notification-stream-header
+{
+    border-bottom: 1px solid var(--dark3);
+}
+
+.notification-stream-list .notification-stream-item:not(.unInteracted)
+{
+    background-color: var(--dark4);
+}
+
+.chat-friend-list .chat-friend-info
+{
+    border-bottom: 1px solid var(--dark3);
+}
+
+.game-card-container,
+.game-card-container:hover
+{
+    position: relative;
+    box-shadow: 0 1px 4px 0 var(--shadow);
+}
+
+.game-main-content .game-play-buttons,
+.game-stats-container
+{
+    border-top: 2px solid var(--dark3);
+    border-bottom: 2px solid var(--dark3);
+}
+
+.section-content
+{
+    box-shadow: 0 1px 4px 0 var(--shadow);
+    padding: 15px;
+    position: relative;
+}
+
+.notification-stream-list .notification-stream-item.unInteracted
+{
+    background-color: var(--dark2);
+}
+
+.notification-data-container .notification-display-text:after,
+.notification-data-container .notification-display-text:before
+{
+    display: none;
+}
+
+.profile-container .asset-item span[title],
+.profile-container .asset-item img
+{
+    border-color: var(--dark3);
+}
+
+.rbx-scrollbar-dragger,
+.rbx-scrollbar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.rbx-scrollbar-dragger,
+.rbx-scrollbar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover
+{
+    background-color: var(--dark4)!important;
+}
+
+.gear-button-wrapper{background-color:transparent!important; border-color:transparent!important;}
+
+.icon-games-carousel-right,
+.icon-games-carousel-left
+{
+    background-color: white;
+    border-radius: 50%;
+    top: 70px!important;
+}
+
+.scroller.next,
+.scroller.prev
+{
+    height: 0px;
+    background: transparent;
+    box-shadow: 0 0 0 0 transparent;
+    border: 0px solid transparent;
+}
+
+
+/*Avatars*/
+.avatar.card-plain,
+.avatar-card-container.card-plain,
+.dialog-container .dialog-message-container.message-inbound .dialog-message-avatar-link,
+.avatar-card-container .avatar-card-fullbody
+{
+    border-color: var(--dark1);
+}
+
+.avatar-card-link.avatar-image-link,
+.avatar .avatar-card-image,
+.avatar-card-fullbody .avatar-card-image,
+.avatar,
+.avatar-card-container,
+.avatar-container.ng-isolate-scope,
+.peopleController
+{
+    background-color: var(--dark1);
+}
+
+
+/*Popovers*/
+.popover.ng-scope.ng-isolate-scope.bottom.people-info-card-container.card-with-game
+{
+    background-color: var(--dark2);
+}
+
+.people-info-card-container .place-container .place-info-container .place-title:before,
+.people-info-card-container .place-container .place-info-container .place-title:after
+{
+    display: none;
+}
+
+.dropdown-menu.interaction-container
+{
+    background-color: var(--dark2);
+}
+
+.people-info-card-container .place-container
+{
+    border-color: var(--dark3);
+}
+
+.popover .arrow
+{
+    display: none;
+}
+
+.dropdown-menu
+{
+    background-color: var(--dark2);
+    box-shadow: 0 2px 8px 1px var(--shadow);
+}
+
+.popover
+{
+    background-color: var(--dark3);
+    border-radius: 4px!important;
+    box-shadow: 0 0 5px 1px var(--shadow);
+}
+
+.people-info-card-container .interaction-item .label
+{
+    border-color: var(--dark3)
+}
+
+.verticaltab.selected{
+    box-shadow: 4px 0 0 0 #00A2FF inset;
+    animation: none!important;
+}
+
+/*Hover, Active Effects (DISABLING IS NOT IMPLEMENTED YET)*/
+.avatar.avatar-card-fullbody:hover
+{
+    box-shadow: 3px 4px 8px 1px var(--shadow);
+    transform: translate3d(-2px, -2px, 0)
+}
+
+.avatar.avatar-card-fullbody:hover:active
+{
+    box-shadow: 3px 4px 2px 0.2px var(--shadow);
+    transform: translate3d(-1px, -1px, 0);
+    transition: all 50ms cubic-bezier(0, 0, 0.2, 1)!important;
+}
+
+.notification-stream-list .notification-stream-item:hover,
+.chat-friend-list .chat-friend-container:hover,
+.dropdown-menu li:hover,
+.menu-vertical .menu-option:hover,
+.menu-vertical .menu-option:focus,
+.menu-vertical .menu-option.active,
+.input-group-btn .dropdown-menu li a:hover,
+.input-group-btn .dropdown-menu li a:focus,
+.input-group-btn .dropdown-menu li a.active,
+.verticaltab:hover:not(.selected)
+{
+    animation: shadowinrightblue 150ms cubic-bezier(0, 0, 0.2, 1)!important;
+    animation-fill-mode: forwards!important;
+}
+
+.btn-secondary-xs:focus,
+.btn-control-xs:focus
+{
+    box-shadow: 0px 0px 0px 0px var(--shadow);
+}
+
+.btn-secondary-xs:hover,
+.btn-primary-sm:hover
+{
+    box-shadow: 3px 4px 4px 1px var(--shadow)!important;
+    transform: translate3d(-1px, -1px, 0);
+}
+
+.btn-secondary-xs:hover:active
+{
+    box-shadow: .5px 1.5px 1px .5px var(--shadow)!important;
+    transform: translate3d(-0px, -0px, 0)
+}
+
+.btn-primary-md:hover,
+.btn-primary-md:focus
+{
+    box-shadow: 0 1px 3px var(--shadow)!important;
+}
+
+.btn-control-xs:hover
+{
+    background-color: #d0d0d0;
+    box-shadow: 0 1px 3px var(--shadow);
+    border-color: #d0d0d0;
+    color: #191919;
+    cursor: pointer;
+}
+
+.btn-control-md:hover,
+.btn-control-md:focus
+{
+    background-color: #fff;
+    box-shadow: .5px 1.5px 1px .5px var(--shadow)!important;
+    border-color: #B8B8B8;
+}
+
+.icon-games-carousel-right:hover,
+.icon-games-carousel-left:hover
+{
+    box-shadow: 3px 4px 4px 1px var(--shadow)!important;
+    transform: translate3d(-1px, -1px, 0);
+}
+
+.icon-games-carousel-right:active,
+.icon-games-carousel-left:active
+{
+    box-shadow: 1px 1.5px 4px 1px var(--shadow)!important;
+    transform: translate3d(0px, 0px, 0);
+}
+
+.chat-friend-list .chat-friend-container:hover
+{
+    background-color: var(--dark4)!important
+}
+
+.rbx-tabs-horizontal .rbx-tab-heading:hover,
+.rbx-tabs-horizontal .rbx-tab-heading:focus,
+.rbx-tabs-horizontal .rbx-tab-heading:active
+{
+    animation: shadowinupblue 100ms
+}
+
+.rbx-tabs-horizontal .rbx-tab.active .rbx-tab-heading
+{
+    animation: none!important;
+}
+
+
+/*Hover, Active Effects Fixes*/
+.avatar-container
+{
+    border-radius: 50%;
+}
+
+.people-list .friend .friend-name
+{
+    display: none;
+}
+
+.icon-more
+{
+    filter: invert(100%);
+}
+
+
+/*Text Colour*/
+.people-list .friend .friend-name,
+.friend-list .friend .friend-name
+{
+    color: var(--light1);
+}
+
+body
+{
+    color: white;
+}
+
+.chat-friend-list .chat-friend-info .chat-friend-message.font-bold
+{
+    color: var(--light1)!important;
+}
+
+.notification-data-container .notification-display-text
+{
+    color: var(--textcolor);
+}
+
+.dialog-input.ng-valid.ng-isolate-scope
+{
+    color: var(--textcolor)
+}
+
+.dropdown-menu li:hover
+{
+    background-color: var(--dark5);
+    box-shadow: 4px 0 0 0 #00A2FF inset;
+}
+
+.popover-content .dropdown-menu li a,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item:link,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item:active,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item:hover,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item:visited,
+.rbx-header .rbx-navbar-icon-group li .popover-content .rbx-menu-item:focus
+{
+    display: block;
+    color: var(--textcolor);
+    font-weight: 300;
+}
+#build-page td.menu-area a.tab-item{color:var(--textcolor)}
+a:link, a:visited, a:active {
+    color: #0079ff;
+}
+/*Icon Colours*/
+
+/*Transitions*/
+.avatar.avatar-card-fullbody
+{
+    transition: all 250ms cubic-bezier(0, 0, 0.2, 1)!important;
+}
+
+.game-card-container
+{
+    transition: all 50ms cubic-bezier(0, 0, 0.2, 1);
+    transition-delay: 150ms;
+}
+
+.people-list .friend .friend-name,
+.friend-list .friend .friend-name
+{
+    transition: color 150ms cubic-bezier(0, 0, 0.2, 1)!important;
+}
+
+.btn-secondary-xs,
+.btn-control-xs,
+.btn-primary-sm
+{
+    transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.icon-more
+{
+    transition: background-position 500ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.icon-games-carousel-right
+{
+    transition: box-shadow 100ms ease, transform 100ms ease;
+}
+
+
+/*Text Hide*/
+.text-overflow.xsmall.place-name.ng-binding.ng-scope
+{
+    display: none;
+}
+
+
+/*Animations*/
+@keyframes shadowinrightblue
+{
+    from
+    {
+        box-shadow: 0 0 0 0 #00A2FF inset;
+    }
+
+    to
+    {
+        box-shadow: 4px 0 0 0 #00A2FF inset;
+    }
+}
+
+@keyframes shadowinupblue
+{
+    from
+    {
+        box-shadow: 0 0 0 0 #00A2FF inset;
+    }
+
+    to
+    {
+        box-shadow: 0 -4px 0 0 #00A2FF inset;
+    }
+}
