@@ -1,6 +1,6 @@
 :root
 {
-    --version: "Theme Version: Beta 1.4.6, Copyright Luke Alan 2018";
+    --version: "Theme Version: Beta 1.4.7, Copyright Luke Alan 2018";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -66,20 +66,36 @@ html,
 {
     background-color: var(--dark2)!important;
 }
+
 #build-page td.menu-area a.tab-item,
-.verticaltab{background-color:var(--dark2);}
+.verticaltab
+{
+    background-color: var(--dark2);
+}
 
+.separator
+{
+    background-color: var(--dark3)!important;
+}
 
-.separator{background-color:var(--dark3)!important;}
 #CashOutWidget,
 .divider-left,
-.vlist.feeds .list-item{border-color: var(--dark3)!important;}
+.vlist.feeds .list-item
+{
+    border-color: var(--dark3)!important;
+}
+
 .tab-container > .tab-active
 {
     background-color: var(--light2);
 }
 
-.SmallCatalogItemView:hover .CatalogItemInner{background-color: var(--dark4)!important; border-color:var(--dark3)!important; box-shadow: 0 0 8px 1px var(--shadow)!important;}
+.SmallCatalogItemView:hover .CatalogItemInner
+{
+    background-color: var(--dark4)!important;
+    border-color: var(--dark3)!important;
+    box-shadow: 0 0 8px 1px var(--shadow)!important;
+}
 
 .tab-container > div
 {
@@ -227,7 +243,11 @@ html,
     background-color: var(--dark4)!important;
 }
 
-.gear-button-wrapper{background-color:transparent!important; border-color:transparent!important;}
+.gear-button-wrapper
+{
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
 
 .icon-games-carousel-right,
 .icon-games-carousel-left
@@ -313,10 +333,12 @@ html,
     border-color: var(--dark3)
 }
 
-.verticaltab.selected{
+.verticaltab.selected
+{
     box-shadow: 4px 0 0 0 #00A2FF inset;
     animation: none!important;
 }
+
 
 /*Hover, Active Effects (DISABLING IS NOT IMPLEMENTED YET)*/
 .avatar.avatar-card-fullbody:hover
@@ -483,7 +505,13 @@ body
     color: var(--textcolor);
     font-weight: 300;
 }
-.menu in row.menus{color:var(--textcolor)}
+
+.rbx-tab-horizontal-submenu li
+{
+    color: var(--textcolor);
+}
+
+
 /*Icon Colours*/
 
 /*Transitions*/
