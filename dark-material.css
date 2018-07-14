@@ -1,9 +1,6 @@
-/*Just a note to you guys, please do not steal this and call it your own*/
-
-
 :root
 {
-    --version: "Theme Version: Beta 1.4.5, Copyright Luke Alan 2018";
+    --version: "Theme Version: Beta 1.4.6, Copyright Luke Alan 2018";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -34,7 +31,6 @@
 
 .section-content.settings-account-info-container
 {
-    height: 150px!important;
     margin-bottom: 50px!important;
     padding: 0;
 }
@@ -76,7 +72,8 @@ html,
 
 .separator{background-color:var(--dark3)!important;}
 #CashOutWidget,
-.divider-left{border-color: var(--dark3)!important;}
+.divider-left,
+.vlist.feeds .list-item{border-color: var(--dark3)!important;}
 .tab-container > .tab-active
 {
     background-color: var(--light2);
@@ -486,10 +483,7 @@ body
     color: var(--textcolor);
     font-weight: 300;
 }
-#build-page td.menu-area a.tab-item{color:var(--textcolor)}
-a:link, a:visited, a:active {
-    color: #0079ff;
-}
+.menu in row.menus{color:var(--textcolor)}
 /*Icon Colours*/
 
 /*Transitions*/
