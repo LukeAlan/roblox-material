@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Beta 1.7.9, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Changed Icons, Button Fixes";
+    --version_changelog: "Theme Version: Beta 1.9.4, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Finally got around to Fixing the Library Page, More Button Fixes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -73,7 +73,8 @@ html,
 
 #CashOutWidget,
 .divider-left,
-.vlist.feeds .list-item {
+.vlist.feeds .list-item,
+.input-group-btn .input-addon-btn {
     border-color: var(--dark3)!important;
 }
 
@@ -94,6 +95,7 @@ html,
 .ph-modal-popup {
     background-color: var(--dark2)!important;
     box-shadow: 0 0 5px 2px var(--shadow)!important;
+    border: 1px solid var(--dark3)!important;
 }
 
 .menu-vertical {
@@ -300,6 +302,50 @@ html,
     box-shadow: 0 1px 4px 0 var(--shadow)!important;
 }
 
+.grid .cell-content {
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.item-card-thumb-container {
+    border-bottom: 1px solid var(--dark3);
+}
+
+.create-new-button.btn-medium.btn-primary {
+    transition: box-shadow 200ms ease-in-out;
+    border: 1px solid transparent;
+    background: #02b757!important;
+    border-color: #02b757;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 4px 4px;
+    font-size: 25px;
+    line-height: 100%;
+    border-radius: 3px;
+}
+
+.stack-row.badge-row,
+.stack-row {background-color:var(--dark2)!important;box-shadow: 0 1px 3px var(--shadow)!important;}
+
+.rbx-tabs-horizontal .nav-tabs {
+    box-shadow: 0 1px 3px var(--shadow);
+}
+
+#build-page td.menu-area a.tab-item{color:var(--textcolor)!important}
+
+#build-page td.menu-area a.tab-item-selected{border:0 solid red}
+
+.tab-item.tab-item-selected{box-shadow: 4px 0 0 0 #00A2FF inset; background-color:var(--dark4)!important;}
+
+#build-page td.content-area,
+#build-page td.menu-area{border-color:var(--dark3)!important;}
+#build-page .item-table .name-col a.title{color: #0079ff;}
+
 /*Avatars*/
 .avatar.card-plain,
 .avatar-card-container.card-plain,
@@ -318,7 +364,6 @@ html,
     background-color: var(--dark1);
 }
 
-
 /*Popovers*/
 .popover.ng-scope.ng-isolate-scope.bottom.people-info-card-container.card-with-game,
 .dropdown-menu.interaction-container {
@@ -335,8 +380,9 @@ html,
     border-color: var(--dark3)!important;
 }
 
-.popover .arrow {
-    display: none;
+.popover .arrow,
+.arrow {
+    display: none!important;
 }
 
 .dropdown-menu {
@@ -367,7 +413,9 @@ html,
     transform: translate3d(-1px, -1px, 0);
     transition: all 50ms cubic-bezier(0, 0, 0.2, 1)!important;
 }
-
+.avatar-container.ng-isolate-scope{
+    background:transparent!important;
+}
 .notification-stream-list .notification-stream-item:hover,
 .chat-friend-list .chat-friend-container:hover,
 .dropdown-menu li:hover,
@@ -377,28 +425,36 @@ html,
 .input-group-btn .dropdown-menu li a:hover,
 .input-group-btn .dropdown-menu li a:focus,
 .input-group-btn .dropdown-menu li a.active,
-.verticaltab:hover:not(.selected) {
+.verticaltab:hover:not(.selected),
+#build-page td.menu-area a.tab-item:not(.tab-item-selected):hover{
     animation: shadowinrightblue 150ms cubic-bezier(0, 0, 0.2, 1)!important;
     animation-fill-mode: forwards!important;
 }
 
 .btn-secondary-xs:focus,
 .btn-control-xs:focus,
-.btn-primary-xs:focus {
+.btn-primary-xs:focus,
+.btn-secondary-md:focus{
     box-shadow: 0px 0px 2px 1px var(--shadow);
 }
 
 .btn-secondary-xs:hover,
 .btn-primary-sm:hover,
-.btn-primary-xs:hover {
+.btn-primary-xs:hover,
+.robux-grid .cell-content .banner-wrap .robux-buy:hover,
+.btn-secondary-md:hover,
+.btn-primary-lg:hover{
     box-shadow: 3px 4px 4px 1px var(--shadow)!important;
     transform: translate3d(-1px, -1px, 0);
 }
 
 .btn-secondary-xs:active,
-.btn-primary-xs:active {
+.btn-primary-xs:active,
+.robux-grid .cell-content .banner-wrap .robux-buy:active,
+.btn-secondary-md:active,
+.btn-primary-lg:active{
     box-shadow: .5px 1.5px 1px .5px var(--shadow)!important;
-    transform: translate3d(-0px, -0px, 0)
+    transform: translate3d(-0px, -0px, 0);
 }
 
 .btn-primary-md:hover,
@@ -443,6 +499,8 @@ html,
     animation: shadowinupblue 100ms
 }
 
+.rbx-tab .rbx-tab-heading{background-color:var(--dark2)!important;}
+
 .rbx-tabs-horizontal .rbx-tab.active .rbx-tab-heading {
     animation: none!important;
 }
@@ -470,6 +528,7 @@ html,
     filter: invert(100%);
 }
 
+.item-card-container:hover{background: var(--dark4); box-shadow: 0 1px 8px 2px var(--shadow)!important;}
 
 /*Text Colour*/
 .people-list .friend .friend-name,
@@ -522,10 +581,18 @@ body {
 
 .rbx-left-col li a{color:var(--light1)}
 
-.item-card-thumb-container {
-    border-bottom: 1px solid var(--dark3);
+.input-group-btn .input-dropdown-btn{color:var(--textcolor)}
+
+.rbx-tabs-horizontal,
+.text-lead{
+    color:var(--textcolor);
 }
 
+#build-page .item-table .totals-label span{
+    color:var(--light1)
+}
+
+#catalog img.original-image{border-color:var(--dark3);}
 
 /*Icon Colours*/
 .icon-nav-home {
@@ -578,8 +645,11 @@ body {
 .btn-secondary-xs,
 .btn-control-xs,
 .btn-primary-sm,
-.btn-primary-xs {
-    transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+.btn-primary-xsm,
+.robux-grid .cell-content .banner-wrap .robux-buy,
+.btn-primary-xs.buy-robux,
+.btn-primary-lg{
+    transition: all 150ms cubic-bezier(0, 0, 0.2, 1)!important;
 }
 
 .icon-more {
@@ -601,6 +671,7 @@ body {
 .avatar.avatar-card-fullbody {
     transition: all 250ms ease;
 }
+.item-card-container{transition:all 150ms ease;}
 /*Text Hide*/
 .text-overflow.xsmall.place-name.ng-binding.ng-scope {
     display: none;
@@ -624,4 +695,17 @@ body {
     to {
         box-shadow: 0 -4px 0 0 #00A2FF inset;
     }
+}
+@keyframes spin {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@keyframes saverobux {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@keyframes background-slide { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
