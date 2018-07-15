@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Beta 1.5.2, Copyright Luke Alan 2018 \a \a Changelog: Major Updates to the Catalog \a \a Soon to come: Changed Icons, Button Fixes";
+    --version_changelog: "Theme Version: Beta 1.7.9, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Changed Icons, Button Fixes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -247,7 +247,6 @@ html,
 .form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched,
 .form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched{
     background-color: var(--dark2)!important;
-    box-shadow: 0 1px 4px 0 var(--shadow)!important;
     color: var(--textcolor)!important;
     border-color: var(--dark3)!important;
 }
@@ -269,6 +268,37 @@ html,
     border-color: var(--dark3);
 }
 
+.input-dropdown-btn.category-options{background-color:var(--dark2)!important; border-color:var(--dark3)}
+
+.input-field[placeholder="Describe yourself(1000 character limit)"],
+.form-control.fake-input-lg,
+.form-control.input-field.ng-pristine.ng-untouched.ng-valid[id=facebook],
+.form-control.input-field.ng-pristine.ng-untouched.ng-valid[id=twitter],
+.form-control.input-field.ng-pristine.ng-untouched.ng-valid[id=googleplus],
+.form-control.input-field.ng-pristine.ng-untouched.ng-valid[id=youtube],
+.form-control.input-field.ng-pristine.ng-untouched.ng-valid[id=twitch],
+.form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched[id=facebook],
+.form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched[id=twitter],
+.form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched[id=googleplus],
+.form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched[id=youtube],
+.form-control.input-field.ng-pristine.ng-valid.ng-not-empty.ng-touched[id=twitch],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=twitter]
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=facebook],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=googleplus],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=youtube],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=twitch],
+.form-control.input-field.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched[id=facebook],
+.form-control.input-field.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched[id=twitter],
+.form-control.input-field.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched[id=googleplus],
+.form-control.input-field.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched[id=youtube],
+.form-control.input-field.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse.ng-touched[id=twitch],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=facebook],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=twitter],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=googleplus],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=youtube],
+.form-control.input-field.ng-pristine.ng-valid.ng-empty.ng-touched[id=twitch]{
+    box-shadow: 0 1px 4px 0 var(--shadow)!important;
+}
 
 /*Avatars*/
 .avatar.card-plain,
@@ -328,11 +358,11 @@ html,
 
 /*Hover, Active, Focusing Effects (DISABLING IS NOT IMPLEMENTED YET)*/
 .avatar.avatar-card-fullbody:hover {
-    box-shadow: 3px 4px 8px 1px var(--shadow);
+    box-shadow: 3px 4px 8px 0px var(--shadow);
     transform: translate3d(-2px, -2px, 0);
 }
 
-.avatar.avatar-card-fullbody:hover:active {
+.avatar.avatar-card-fullbody:active {
     box-shadow: 3px 4px 2px 0.2px var(--shadow);
     transform: translate3d(-1px, -1px, 0);
     transition: all 50ms cubic-bezier(0, 0, 0.2, 1)!important;
@@ -353,17 +383,20 @@ html,
 }
 
 .btn-secondary-xs:focus,
-.btn-control-xs:focus {
-    box-shadow: 0px 0px 0px 0px var(--shadow);
+.btn-control-xs:focus,
+.btn-primary-xs:focus {
+    box-shadow: 0px 0px 2px 1px var(--shadow);
 }
 
 .btn-secondary-xs:hover,
-.btn-primary-sm:hover {
+.btn-primary-sm:hover,
+.btn-primary-xs:hover {
     box-shadow: 3px 4px 4px 1px var(--shadow)!important;
     transform: translate3d(-1px, -1px, 0);
 }
 
-.btn-secondary-xs:hover:active {
+.btn-secondary-xs:active,
+.btn-primary-xs:active {
     box-shadow: .5px 1.5px 1px .5px var(--shadow)!important;
     transform: translate3d(-0px, -0px, 0)
 }
@@ -525,7 +558,8 @@ body {
 .icon-nav-shop {
     background-position: -28px -448px;
 }
-.icon-nav-search {  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABPElEQVR4Ae3QAUSccRjH8TebO+NgMGaDmTFsISWUAgGCQwVBUFCAJAKCqigSRCgQUiCVKAgEdJBARF24iAr11icUuO71fy8C7gvw4+PxRO+tlpwO/YZ1+/9+pN6OGACXxmSqRTKmPXrbsaZqmKxDQOzIimm7SoBYV3poGbDvZ/SaOgNuwJ1/6ZhGwJS6suWPM7CdDtoEGxW3BjFoDDNfxXjwPWGfB7NhKA8OEvcOUAhDg2Ahcf8GSmFoBEwm7l/AfRjqA6uJ+19wFoaawWXiPgDWo3DOQU/F7ZMC6I3CGQVXflXY5kBJNgonpwiK2svevAAYjNKlzSN4sijvt5xWQ04BJ1H65F2rXBFsyaSlflhT3o0ZnwlTZWkx4cCFWwVLOl9ebAthKpysvRpVNTUWhQtT4YvSUeNhptYH9QzDmstiBLQWNgAAAABJRU5ErkJggg==');
+.icon-nav-search,
+.icon-search{  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABPElEQVR4Ae3QAUSccRjH8TebO+NgMGaDmTFsISWUAgGCQwVBUFCAJAKCqigSRCgQUiCVKAgEdJBARF24iAr11icUuO71fy8C7gvw4+PxRO+tlpwO/YZ1+/9+pN6OGACXxmSqRTKmPXrbsaZqmKxDQOzIimm7SoBYV3poGbDvZ/SaOgNuwJ1/6ZhGwJS6suWPM7CdDtoEGxW3BjFoDDNfxXjwPWGfB7NhKA8OEvcOUAhDg2Ahcf8GSmFoBEwm7l/AfRjqA6uJ+19wFoaawWXiPgDWo3DOQU/F7ZMC6I3CGQVXflXY5kBJNgonpwiK2svevAAYjNKlzSN4sijvt5xWQ04BJ1H65F2rXBFsyaSlflhT3o0ZnwlTZWkx4cCFWwVLOl9ebAthKpysvRpVNTUWhQtT4YvSUeNhptYH9QzDmstiBLQWNgAAAABJRU5ErkJggg==');
     background-position:0 0!important;
     background-size: contain!important;
 }
@@ -543,7 +577,8 @@ body {
 
 .btn-secondary-xs,
 .btn-control-xs,
-.btn-primary-sm {
+.btn-primary-sm,
+.btn-primary-xs {
     transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -570,8 +605,6 @@ body {
 .text-overflow.xsmall.place-name.ng-binding.ng-scope {
     display: none;
 }
-
-
 /*Animations*/
 @keyframes shadowinrightblue {
     from {
