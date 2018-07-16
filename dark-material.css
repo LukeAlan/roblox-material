@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Semi-Stable 1.0\a \a Changelog: More Changes to Catalog \a \a Soon to come: Finally got around to Fixing the Library Page, More Button Fixes";
+    --version_changelog: "Theme Version: Semi-Stable 1.2, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Finally got around to Fixing the Library Page, More Button Fixes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -351,11 +351,26 @@ html,
     background-color: var(--dark2)!important;
     box-shadow: 0 1px 3px var(--shadow);
 }
+
+.messages .messageDivider.unread {
+    background-color: var(--dark2);
+    border-color:var(--dark3);
+}
+
+.messages .messageDivider {
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid var(--dark3);
+    background: var(--dark5);
+    padding: 9px 15px;
+}
+
 /*Avatars*/
 .avatar.card-plain,
 .avatar-card-container.card-plain,
 .dialog-container .dialog-message-container.message-inbound .dialog-message-avatar-link,
-.avatar-card-container .avatar-card-fullbody {
+.avatar-card-container .avatar-card-fullbody,
+.messages .messageDivider .avatar{
     border-color: var(--dark1);
 }
 
@@ -386,7 +401,7 @@ html,
 }
 
 .popover .arrow,
-.arrow {
+.roblox-popover-container.notification-stream-wrap .arrow{
     display: none!important;
 }
 
@@ -405,7 +420,6 @@ html,
     box-shadow: 4px 0 0 0 #00A2FF inset;
     animation: none!important;
 }
-
 
 /*Hover, Active, Focusing Effects (DISABLING IS NOT IMPLEMENTED YET)*/
 .avatar.avatar-card-fullbody:hover {
@@ -432,7 +446,8 @@ html,
 .input-group-btn .dropdown-menu li a.active,
 .verticaltab:hover:not(.selected),
 #build-page td.menu-area a.tab-item:not(.tab-item-selected):hover,
-.menu-vertical .menu-option .menu-secondary-option:not(.active):hover{
+.menu-vertical .menu-option .menu-secondary-option:not(.active):hover,
+.messages .messageDivider:hover{
     animation: shadowinrightblue 150ms cubic-bezier(0, 0, 0.2, 1)!important;
     animation-fill-mode: forwards!important;
 }
@@ -603,6 +618,15 @@ body {
 }
 
 #catalog img.original-image{border-color:var(--dark3);}
+
+.messages .messageDivider.unread .message-summary-body .subject {
+    color: var(--light1);
+    font-weight: 600;
+}
+
+.message-summary-content .subject{
+    
+}
 
 /*Icon Colours*/
 .icon-nav-home {
