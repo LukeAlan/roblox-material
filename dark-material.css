@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Beta 1.9.4, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Finally got around to Fixing the Library Page, More Button Fixes";
+    --version_changelog: "Theme Version: Semi-Stable 1.0, Copyright Luke Alan 2018 \a \a Changelog: More Changes to Catalog \a \a Soon to come: Finally got around to Fixing the Library Page, More Button Fixes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -346,6 +346,11 @@ html,
 #build-page td.menu-area{border-color:var(--dark3)!important;}
 #build-page .item-table .name-col a.title{color: #0079ff;}
 
+.menu-vertical.submenus {background-color:var(--dark2)!important}
+.menu-vertical .menu-option .menu-secondary {
+    background-color: var(--dark2)!important;
+    box-shadow: 0 1px 3px var(--shadow);
+}
 /*Avatars*/
 .avatar.card-plain,
 .avatar-card-container.card-plain,
@@ -426,7 +431,8 @@ html,
 .input-group-btn .dropdown-menu li a:focus,
 .input-group-btn .dropdown-menu li a.active,
 .verticaltab:hover:not(.selected),
-#build-page td.menu-area a.tab-item:not(.tab-item-selected):hover{
+#build-page td.menu-area a.tab-item:not(.tab-item-selected):hover,
+.menu-vertical .menu-option .menu-secondary-option:not(.active):hover{
     animation: shadowinrightblue 150ms cubic-bezier(0, 0, 0.2, 1)!important;
     animation-fill-mode: forwards!important;
 }
@@ -513,8 +519,12 @@ html,
 .menu-vertical .menu-option:hover {
     background-color: var(--dark3)
 }
-
-
+.menu-vertical .menu-option .menu-secondary-option:hover {
+    background-color: var(--dark4)!important;
+}
+.menu-vertical .menu-option .menu-secondary-option:hover {
+    background-color: var(--dark4)!important;
+}
 /*Hover, Active, Focusing Effects Fixes*/
 .avatar-container {
     border-radius: 50%;
@@ -630,7 +640,15 @@ body {
     background-position:0 0!important;
     background-size: contain!important;
 }
-
+.icon-right-16x16 {
+    background-position: 0 -224px;
+    height:16px;
+    width:16px;
+    background: url("https://raw.githubusercontent.com/LukeAlan/roblox-material/master/assets/carrot_right.png");
+    background-size:contain;
+    margin-top:3px!important;
+}
+.breadcrumb-container .icon-right-16x16{margin-top:0px!important;}
 /*Transitions*/
 .game-card-container {
     transition: all 50ms cubic-bezier(0, 0, 0.2, 1);
@@ -672,6 +690,10 @@ body {
     transition: all 250ms ease;
 }
 .item-card-container{transition:all 150ms ease;}
+
+.menu-vertical .menu-option .menu-secondary-option {
+    transition: all 150ms ease;
+}
 /*Text Hide*/
 .text-overflow.xsmall.place-name.ng-binding.ng-scope {
     display: none;
