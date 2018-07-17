@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Semi-Stable 1.4\a \a Changelog: Forgot to changed this, but I accidentally snatched the arrow on the games page, it's fixed now though so don't worry. \a \a Soon to come: Fixed the Library Page, More Button Fixes";
+    --version_changelog: "Theme Version: Semi-Stable 1.2.15\a \a Changelog: CHEEZITS \a \a Soon to come: MORE CHEEZITS";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -57,14 +57,35 @@ html,
 .dialog-container,
 .game-card-container,
 .section-content,
-.CatalogItemInner.SmallInner {
+.CatalogItemInner.SmallInner,
+.MembersUpdatePanel,
+.rbx-header .rbx-navbar-search .input-field{
     background-color: var(--dark2)!important;
 }
+
+.rbx-header,
+.chat-windows-header{background-color:var(--dark5)!important;}
+
+.icon-default-logo, .icon-logo{background-position:0;
+background: url("http://www.jamestraggianese.com/files/gimgs/5_tumblrm70epffuoa1qzaos7o11280.png"); background-size:contain; background-repeat:no-repeat; transform: rotate(16deg); width:29px; margin-right:89px;}
 
 #build-page td.menu-area a.tab-item,
 .verticaltab,
 .rbx-left-col{
     background-color: var(--dark2);
+}
+
+.redesign .tab_white_31h_container .ajax__tab_inner, .tab, .tab-container>div{
+    background-color:var(--dark4);
+}
+.redesign .tab_white_31h_container .ajax__tab_active .ajax__tab_inner, .tab.active, .tab-container>.tab-active, .tab-container>.tab-active:hover{
+    background-color:var(--dark2)!important;
+}
+
+.redesign .tab_white_31h_container .ajax__tab_inner, .tab, .tab-container>div{
+    border-color:var(--dark3)!important;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
 }
 
 .separator {
@@ -74,7 +95,8 @@ html,
 #CashOutWidget,
 .divider-left,
 .vlist.feeds .list-item,
-.input-group-btn .input-addon-btn {
+.input-group-btn .input-addon-btn,
+.rbx-header .rbx-navbar-search .input-field{
     border-color: var(--dark3)!important;
 }
 
@@ -365,6 +387,8 @@ html,
     padding: 9px 15px;
 }
 
+.divider-top{border-color:var(--dark3)!important;}
+
 /*Avatars*/
 .avatar.card-plain,
 .avatar-card-container.card-plain,
@@ -624,6 +648,10 @@ body {
     font-weight: 600;
 }
 
+.product-summary .product-description{color:var(--light1);}
+
+.header h1, .product-space{color:var(--textcolor)!important;}
+
 .message-summary-content .subject{
     
 }
@@ -664,6 +692,7 @@ body {
     background-position:0 0!important;
     background-size: contain!important;
 }
+
 .icon-right-16x16 {
     background-position: 0 -224px;
     height:16px;
@@ -673,6 +702,17 @@ body {
     margin-top:3px!important;
 }
 .breadcrumb-container .icon-right-16x16{margin-top:0px!important;}
+.icon-nav-notification-stream{
+    background-position:0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQAAAADK40qVAAAAAnRSTlMAAHaTzTgAAAAbSURBVHgBYwCBUfAfCj7QkENn/4z6Z9Q/owAAVoodEEbw8BYAAAAASUVORK5CYII=');
+    background-size: contain;
+}
+.icon-nav-settings{background-position:0;
+background: url('data:image/png;base64,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'); background-size:contain;}
+.icon-nav-settings:hover{
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAQAAABIkb+zAAADwUlEQVR4Ae3aU9gjSxSF4XVs27Zt27Zt27Zt27Zt27Yx7vzfmHkq2bWrJ6mLfvu6zbWqNUClUqlUKhXW4+iG02HMpXyxAhZrKldcgMU1yhWPYvGCcsWXWPyiPDEcViMrR8yI1TzKEatitYFyxJ5YHaIccS5WVyhHPIjVM8oRn2L1g1qLUbiDHziJKRTEwnTHbmUFMRnH8jj7MrzKwgn0VeMeVlQdFuBhYj3H/KrDMtxOQV9nqRxMSXcG9Ql7Mab6YUJux+tOJhmwnDHYjY8ZVMH0KgN3Ue9/LmFWia35mxT/sAvDMCsX8D/1HlU6liTsS8rwNWFrpH/ffEA7fcYISsHutNuB8mMc/qTdOjFBSsLKwZXyYVY6yMPc8uAZcvGKryDJyWaKw0h8Q6o/eZbzOY1reJR/SfMjoyoGh5PiSfZjdg2CkdmYx0lxnOwYl054Pcr8CmAhHsOrKxPJihXx6db8WmUzeuCzqqwYm5+J9zsLyIBF+Y14vzFe3Cf0m8SpsaSMmJcuxPmQaeKfQ5cQ4yBFYE1i3MAo8mBTOmPzriJxm/nm3Vl+zMKXWCyvSExDQXPfMI/SMAb30MzzcuBWmnmMsVQG9qegkZ3kwOY0UuMIhlFZOI2wgnHkwFh0EHahysT1hH0sJz4h7DaViccIe1pOPEPYkyoTrxB2s5y4hbCXW7cDN8iJG1u3A88Q9pSceMpxYfpwe8tv4jtVJi4mrGAsZ2lTtGQ0mWE4ghqNbCoHdqSRDo5nWKVjLEOKulUOvEAzTzOu0jCPKdwXtq91R+r7nnnkx850x+Z2ReI9bLqyg3dY6QYMfEU4BxLjBkaK/1r/kDhdmFdGLEmNOO8yZVyt8jvxfjOG+vlcS/+Fscv8acBfq2xBN3xWkBUT0x2vRxoWW4/g1YlxZMeJpHiUTQa/7ZiNfXmaFIcoBqPyK2n+5SGu4TQu5Fn+JtU3jKA4bElO1vZlgFw8Iw8WIg8Fs8qHa8jBufJiAjrRbn8yjvw4hHbbRSkYgW9opw8YRmlYm7Cv8bMtZcmh1Uj8y3nMxDDszL+k+JOtJebkEjobUoYPs1IwqPfZhdHUD5NwD163MOEg0XVvvhgiykypcnA2ffXgNpZWHebnOWI9Uh8WGYYVuZcafR2vsjAC+/IExzCxglgZu+6Nrm2m4mR+4HZGVWvxE1afKEc8h9UDyhFXYXWOcsRhWO2hHLERVqsoR8yH1QzKEWNiUzCc8sRvWHyhXPESFo8oV1yLxQXKFatisbLyxZwcztENp/VVqVQqlUqlv57eWJ/sT9xhigAAAABJRU5ErkJggg==');
+    background-size:contain;
+}
 /*Transitions*/
 .game-card-container {
     transition: all 50ms cubic-bezier(0, 0, 0.2, 1);
@@ -690,7 +730,8 @@ body {
 .btn-primary-xsm,
 .robux-grid .cell-content .banner-wrap .robux-buy,
 .btn-primary-xs.buy-robux,
-.btn-primary-lg{
+.btn-primary-lg,
+.btn-secondary-md{
     transition: all 150ms cubic-bezier(0, 0, 0.2, 1)!important;
 }
 
