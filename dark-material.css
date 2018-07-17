@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Semi-Stable 1.2.16\a \a Changelog: CHEEZITS \a \a Soon to come: MORE CHEEZITS";
+    --version_changelog: "Theme Version: Semi-Stable 1.2.15\a \a Changelog: Replaced SOME Icons \a \a Soon to come: Even more icon changes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -14,7 +14,7 @@
 
 /*Shows Version in settings*/
 .section-content.settings-account-info-container:after {
-    width: auto;
+    width:794px;
     height: auto;
     left: 15px!important;
     content: var(--version_changelog);
@@ -67,14 +67,13 @@ html,
 .chat-windows-header{background-color:var(--dark5)!important;}
 
 .icon-default-logo, .icon-logo{background-position:0;
-background: url("http://www.jamestraggianese.com/files/gimgs/5_tumblrm70epffuoa1qzaos7o11280.png"); background-size:contain; background-repeat:no-repeat; transform: rotate(16deg); width:29px; margin-right:89px;}
+background: url("https://t3.rbxcdn.com/f7ab13a25dee0266c682449e698800ee"); background-size:contain; background-repeat:no-repeat;}
 
 #build-page td.menu-area a.tab-item,
 .verticaltab,
 .rbx-left-col{
     background-color: var(--dark2);
 }
-
 .redesign .tab_white_31h_container .ajax__tab_inner, .tab, .tab-container>div{
     background-color:var(--dark4);
 }
@@ -88,7 +87,8 @@ background: url("http://www.jamestraggianese.com/files/gimgs/5_tumblrm70epffuoa1
     border-top-right-radius:4px;
 }
 
-.separator {
+.separator,
+.rbx-divider{
     background-color: var(--dark3)!important;
 }
 
@@ -564,6 +564,20 @@ background: url("http://www.jamestraggianese.com/files/gimgs/5_tumblrm70epffuoa1
 .menu-vertical .menu-option .menu-secondary-option:hover {
     background-color: var(--dark4)!important;
 }
+.rbx-header .rbx-navbar-search .rbx-navbar-search-option.selected{
+    background-color:var(--dark4)
+}
+
+.input-group-btn .dropdown-menu li a:hover, .input-group-btn .dropdown-menu li a:focus {
+    background-color: var(--dark4);
+}
+
+.open .input-dropdown-btn {
+    background-color: #00A2FF;
+    color: #fff!important;
+}
+
+
 /*Hover, Active, Focusing Effects Fixes*/
 .avatar-container {
     border-radius: 50%;
@@ -651,6 +665,10 @@ body {
 .product-summary .product-description{color:var(--light1);}
 
 .header h1, .product-space{color:var(--textcolor)!important;}
+
+#navbar-search-input{color:var(--light1);}
+
+.rbx-header .rbx-navbar-search .rbx-navbar-search-option a{color:var(--light1);}
 
 .message-summary-content .subject{
     
