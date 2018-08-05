@@ -1,5 +1,5 @@
 :root {
-    --version_changelog: "Theme Version: Semi-Usable 1.2.21\a \a Changelog: Redone more SVGs\a \a Soon to come: More icon changes";
+    --version_changelog: "Theme Version: Semi-Usable 1.2.3\a \a Changelog: Fixed uncoloured avatar\a \a In the works: Icon changes";
     --dark1: #0d0d0d;
     --dark2: #1b1b1b;
     --dark3: #282828;
@@ -47,12 +47,12 @@ body,
 #DeveloperExchangeTab,
 html,
 .container-footer,
-#DevelopSplashScreen .body-container .blurbs-container {
+#DevelopSplashScreen .body-container .blurbs-container,
+#LibraryTab {
     background-color: var(--dark1)!important;
 }
 
 .avatar-card-content,
-#LibraryTab,
 .SmallCatalogItemView,
 .dialog-container .dialog-body,
 .dialog-container,
@@ -122,13 +122,15 @@ html,
 }
 
 .SmallCatalogItemView:hover .CatalogItemInner {
-    background-color: var(--dark4)!important;
-    border-color: var(--dark3)!important;
     box-shadow: 0 0 8px 1px var(--shadow)!important;
 }
 
 .tab-container > div {
     background-color: var(--dark4);
+}
+
+.profile-avatar-right .profile-avatar-mask {
+    background-color:var(--dark5);
 }
 
 .ph-modal-popup {
@@ -183,7 +185,10 @@ html,
 .chat-main {
     background: var(--dark2);
 }
-
+.chat-main,
+.dialog-container .dialog-header{
+    box-shadow: 0 0px 4px 0px var(--shadow);
+}
 .profile-about-footer {
     border-top: 1px solid var(--dark3);
 }
@@ -459,7 +464,30 @@ html,
 
 .btn-control.btn-control-large {
     border-radius: 4px;
+    background:white;
+    border-color:white;
+    box-shadow: 0 0 2px 0px red
 }
+div[style="height:23px;border:1px solid #a7a7a7;padding:2px 2px 0 2px;margin-right:6px;float:left;position:relative"] {
+    border-color:var(--dark3)!important;
+    background-color:var(--dark2);
+    box-shadow: 0 0 4px 0px var(--shadow);
+}
+
+#categoriesForKeyword {
+    border: 1px solid var(--dark2);
+    background-color: var(--dark2);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='#707070'/%3E %3Cpath d='M0 0h24v24H0z' fill='none'/%3E %3C/svg%3E")!important;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+#categoriesForKeyword:hover
+#categoriesForKeyword:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='rgb(190, 190, 190)'/%3E %3Cpath d='M0 0h24v24H0z' fill='none'/%3E %3C/svg%3E")!important;
+    outline:0;
+}
+#categoriesForKeyword select{border-color:red;}
 
 .GroupControlsBox {
     border-radius: 4px;
@@ -531,6 +559,10 @@ html,
     border-radius: 4px 4px 4px 4px;
 }
 
+.slide-switcher .slide-item-container .slide-item-container-right{
+    background-color:var(--dark5)
+}
+
 .btn-control.btn-control-medium {
     border-radius: 4px;
     background: #fff!important;
@@ -540,8 +572,35 @@ html,
     border-radius: 4px;
     background: #dbdbdb!important;
 }
-.profile-header .icon-more{}
 
+.profile-accoutrements-container .profile-accoutrements-slider .accoutrement-item .accoutrement-image,
+.profile-accoutrements-container .profile-accoutrements-slider .accoutrement-item a {
+    background-color:var(--dark2) 
+}
+.profile-accoutrements-container .profile-accoutrements-slider .accoutrement-item a {
+    box-shadow: 0 0 3px 1px var(--shadow);
+}
+#catalog .loading{background-color:var(--dark2)}
+div#textDisplay {
+    padding-left: 3px;
+    background-color: var(--dark2);
+    border-radius: 0 0 4px 4px;
+    height:54px;
+    width:147px!important;
+}
+.CatalogItemOuter {
+    float: left;
+    margin: 20px 3px;
+    width:150px;
+}
+div#catalog .CatalogItemInner div.image-small,
+.item-image-wrapper,
+.SmallCatalogItemView .CatalogItemInner{width:150px;height:150px; border-radius:4px;}
+.item-image-wrapper{width:150px;height:150px;}
+#catalog img.original-image{background-color:var(--dark2);border:none;border-bottom:1px solid #B8B8B8; width:150px; height:150px;}
+#catalog .SmallCatalogItemView div.roblox-item-image{padding:0;}
+.SmallCatalogItemView .CatalogItemInner{width: 150px;}
+.SmallCatalogItemView:hover .CatalogItemInner{width:170px; background-color:var(--dark2); border-color: var(--dark2)!important; border-radius:4px 4px 4px 4px}
 /*Avatars*/
 .avatar.card-plain,
 .avatar-card-container.card-plain,
@@ -557,7 +616,8 @@ html,
 .avatar,
 .avatar-card-container,
 .avatar-container.ng-isolate-scope,
-.peopleController {
+.peopleController,
+.avatar .avatar-card-link, .avatar-card-fullbody .avatar-card-link {
     background-color: var(--dark1);
 }
 
@@ -613,6 +673,8 @@ html,
     box-shadow: 4px 0 0 0 #00A2FF inset;
     animation: none!important;
 }
+
+/*Profile Badges*/
 
 
 /*Hover, Active, Focusing Effects (DISABLING IS NOT IMPLEMENTED YET)*/
@@ -754,6 +816,9 @@ html,
     color: #fff!important;
 }
 
+.profile-accoutrements-container .profile-accoutrements-slider .accoutrement-item a:hover {
+    box-shadow: 0 0 8px 1px var(--shadow);
+}
 
 /*Hover, Active, Focusing Effects Fixes*/
 .avatar-container {
@@ -764,15 +829,11 @@ html,
     display: none;
 }
 
-.icon-more {
-    filter: invert(100%);
-}
-
 .item-card-container:hover {
     background: var(--dark4);
     box-shadow: 0 1px 8px 2px var(--shadow)!important;
 }
-
+.people-list .friend .friend-link, .friend-list .friend .friend-link{border-radius:50%;}
 
 /*Text Colour*/
 .people-list .friend .friend-name,
@@ -866,8 +927,12 @@ body {
     color: var(--light1);
 }
 
-.message-summary-content .subject {background-color:var(--light1);}
-
+.message-summary-content .subject {
+    background-color:var(--light1);
+}
+#categoriesForKeyword {
+    color:var(--light1);
+}
 
 /*Icon Colours*/
 .icon-nav-home {
@@ -1009,10 +1074,10 @@ a:hover .icon-nav-shop {
 }
 
 .icon-right-16x16 {
-    background-position: 0 -224px;
+    background-position: 0 0;
     height: 16px;
     width: 16px;
-    background: url("https://raw.githubusercontent.com/LukeAlan/roblox-material/master/assets/carrot_right.png");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cg id='Rounded'%3e%3cpath d='M9.29,15.88L13.17,12L9.29,8.12c-0.39-0.39-0.39-1.02,0-1.41l0,0c0.39-0.39,1.02-0.39,1.41,0l4.59,4.59 c0.39,0.39,0.39,1.02,0,1.41l-4.59,4.59c-0.39,0.39-1.02,0.39-1.41,0l0,0C8.91,16.91,8.9,16.27,9.29,15.88z' fill='#707070'/%3e%3c/g%3e%3c/svg%3e ");
     background-size: contain;
     margin-top: 3px!important;
 }
@@ -1038,6 +1103,22 @@ a:hover .icon-nav-shop {
     background-size: contain;
 }
 
+.profile-header .icon-more {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M0 0h24v24H0z' fill='none'/%3E %3Cpath d='M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' fill='#707070'/%3E %3C/svg%3E");
+    background-position:0px!important;
+    background-size:contain;
+}
+
+.profile-header .icon-more:hover{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M0 0h24v24H0z' fill='none'/%3E %3Cpath d='M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' fill='#cfcfcf'/%3E %3C/svg%3E ");
+    background-size:contain;
+}
+
+.content .page-content .rbx-tab-content .settings-account-info-container .form-group .account-field-verified-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z' fill='%2302b757'/%3E %3C/svg%3E ");
+    background-position:0;
+    background-size: contain;
+}
 
 /*Transitions*/
 .game-card-container {
@@ -1062,32 +1143,12 @@ a:hover .icon-nav-shop {
     transition: all 150ms cubic-bezier(0, 0, 0.2, 1)!important;
 }
 
-.icon-more {
-    transition: background-position 500ms cubic-bezier(0, 0, 0.2, 1);
-}
-
 .icon-games-carousel-right {
     transition: box-shadow 100ms ease, transform 100ms ease;
 }
 
-.input-field[placeholder="Describe yourself(1000 character limit)"] {
-    transition: all 150ms ease;
-}
-
-.menu-option.ng-scope {
-    transition: all 150ms ease;
-}
-
 .avatar.avatar-card-fullbody {
     transition: all 250ms ease;
-}
-
-.item-card-container {
-    transition: all 150ms ease;
-}
-
-.menu-vertical .menu-option .menu-secondary-option {
-    transition: all 150ms ease;
 }
 
 .avatar,
@@ -1104,9 +1165,14 @@ a:hover .icon-nav-shop {
 #build-page td.menu-area a.tab-item:not(.tab-item-selected),
 .menu-vertical .menu-option .menu-secondary-option:not(.active),
 .messages .messageDivider,
-.rbx-tab .rbx-tab-heading {
-    transition:all 150ms ease!important;
+.rbx-tab .rbx-tab-heading,
+.menu-vertical .menu-option .menu-secondary-option,
+.item-card-container,
+.menu-option.ng-scope,
+.input-field[placeholder="Describe yourself(1000 character limit)"] {
+    transition: all 150ms ease!important;
 }
+.profile-accoutrements-container .profile-accoutrements-slider .accoutrement-item a{transition: all .5s ease;}
 /*Text Hide*/
 .text-overflow.xsmall.place-name.ng-binding.ng-scope {
     display: none;
